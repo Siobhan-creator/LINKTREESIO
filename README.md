@@ -7,10 +7,12 @@ style.css  : Fichier de styles à créer
 Linktree HTML
 
 Description
+
 Ce projet est une page web personnelle de type Linktree qui permet de centraliser différents liens vers les réseaux sociaux et plateformes de l’artiste Shevaun.
 
 
 Fonctionnalités
+
 Photo de profil personnalisée
 Titre et description
 Liens rapides vers :
@@ -30,9 +32,11 @@ HTML5
 Linktree Style CSS
 
 Description
+
 Ce fichier CSS définit le style pour une page de liens personnelle avec un design moderne et élégant, utilisant des effets visuels dynamiques.
 
 Caractéristiques de Style
+
 Typographie
 Police principale : 'Courier New', Courier, monospace
 Couleur de texte : Blanc
@@ -40,6 +44,7 @@ Effet de texte : Ombrage lumineux sur le titre
 
 
 Mise en Page
+
 Conteneur centré avec fond violet
 Bordures arrondies
 Effet de flou (backdrop-filter)
