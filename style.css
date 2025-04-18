@@ -1,80 +1,102 @@
+/* Style du titre principal */
 h1 {
-    color: rgb(255, 255, 255);
-    font-family :'Courier New', Courier, monospace ;
-    font-size: 1.5rem;
-    margin-top: 15px;
-    margin-bottom: 5px;
-    text-shadow: 
-                0 0 5px #aaaaaa,
-                0 0 10px #888888,
-                0 0 15px #666666,
-                0 0 20px #444444;
-    letter-spacing: 1px; 
-    
+    color: rgb(255, 255, 255);             /* Couleur blanche du texte */
+    font-family: 'Courier New', Courier, monospace;  /* Police de caractères type machine à écrire */
+    font-size: 1.5rem;                     /* Taille de la police */
+    margin-top: 15px;                      /* Marge supérieure */
+    margin-bottom: 5px;                    /* Marge inférieure */
+    text-shadow:                           /* Effet d'ombre du texte en plusieurs couches */
+        0 0 5px #aaaaaa,                  /* Première couche d'ombre */
+        0 0 10px #888888,                 /* Deuxième couche d'ombre */
+        0 0 15px #666666,                 /* Troisième couche d'ombre */
+        0 0 20px #444444;                 /* Quatrième couche d'ombre */
+    letter-spacing: 1px;                   /* Espacement entre les lettres */
 }
 
+/* Style des paragraphes */
 p {
-    color: rgb(255, 255, 255);
-    font-family :'Courier New', Courier, monospace ;
-    text-align: center;
-    width: 250px;
+    color: rgb(255, 255, 255);             /* Couleur blanche du texte */
+    font-family: 'Courier New', Courier, monospace;  /* Police de caractères */
+    text-align: center;                    /* Alignement du texte au centre */
+    width: 250px;                          /* Largeur fixe */
 }
+
+/* Style des images */
 img {
-    width: 100%;
-    max-width: 100px;
-    background-color: white;
-    border-radius: 200px;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    animation: pulse 1s infinite alternate;
-        }
-        
-    @keyframes pulse {
-     0% {
-        transform: scale(1);
-        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-        }
-     100% {
-        transform: scale(1.05);
-        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
-            }
-       
+    width: 100%;                           /* Largeur à 100% du conteneur */
+    max-width: 100px;                      /* Largeur maximale limitée */
+    background-color: white;               /* Fond blanc */
+    border-radius: 200px;                  /* Bordure arrondie pour effet circulaire */
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);  /* Première ombre portée (redéfinie ci-dessous) */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Ombre portée */
+    animation: pulse 1s infinite alternate; /* Animation nommée "pulse" */
 }
 
+/* Définition de l'animation "pulse" */
+@keyframes pulse {
+    0% {                                   /* État initial de l'animation */
+        transform: scale(1);               /* Taille normale */
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);  /* Ombre légère */
+    }
+    100% {                                 /* État final de l'animation */
+        transform: scale(1.05);            /* Légère augmentation de taille (5%) */
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15); /* Ombre plus prononcée */
+    }
+}
+
+/* Conteneur principal avec titre */
 .container_title {
-    background-color: rgb(75, 23, 106);
-    width: 250px;
-    padding: 100px;
-    margin: 450px;
-    text-align: center;
-    border-radius: 50px;
-    backdrop-filter: blur(5px);
-            
-}
-
-small {
-    color: aliceblue;
-    font-family :'Courier New', Courier, monospace ;
-}
-
-.links_all {
-   border-radius: 30px;
-}
-
-.button {
-        display: block;
-        width: 250px;
-        margin: 10px 0;
-        padding: 10px;
-        background-color: rgb(75, 23, 106)183e;
-        border: 1px solid #d9d5d58d;
-        border-radius: 10px;
-        text-align: center;
-        cursor: pointer;
-        transition: background-color 0.3s ease
-}
- a {
-    font-family:'Courier New', Courier, monospace ;
-    color:aliceblue;
+    background-color: rgb(75, 23, 106);    /* Couleur de fond violette */
+    width: 250px;                          /* Largeur fixe */
+    padding: 100px;                        /* Rembourrage intérieur */
+    margin: 450px;                         /* Marge extérieure */
+    text-align: center;                    /* Alignement du texte au centre */
+    border-radius: 50px;                   /* Coins arrondis */
+    backdrop-filter: blur(5px);            /* Effet de flou sur l'arrière-plan */
     
+    /* Configuration flexbox pour centrer le contenu verticalement et horizontalement */
+    display: flex;                         /* Active le modèle flexbox */
+    flex-direction: column;                /* Empile les éléments verticalement */
+    justify-content: center;               /* Centre les éléments verticalement */
+    align-items: center;                   /* Centre les éléments horizontalement */
+}
+
+/* Conteneur flexible réutilisable */
+.flex_container {
+    display: flex;                         /* Active le modèle flexbox */
+    flex-wrap: wrap;                       /* Permet le retour à la ligne des éléments */
+    justify-content: space-between;        /* Répartit l'espace entre les éléments */
+    align-items: center;                   /* Centre les éléments verticalement */
+    gap: 20px;                             /* Espace entre les éléments */
+}
+
+/* Style du texte en petite taille */
+small {
+    color: aliceblue;                      /* Couleur bleu clair */
+    font-family: 'Courier New', Courier, monospace;  /* Police de caractères */
+}
+
+/* Style pour le conteneur de liens */
+.links_all {
+    border-radius: 30px;                   /* Coins très arrondis */
+}
+
+/* Style des boutons */
+.button {
+    display: block;                        /* Affichage en bloc (prend toute la largeur disponible) */
+    width: 250px;                          /* Largeur fixe */
+    margin: 10px 0;                        /* Marges verticales */
+    padding: 10px;                         /* Rembourrage intérieur */
+    background-color: rgb(75, 23, 106);    /* Couleur de fond violette */
+    border: 1px solid #d9d5d58d;           /* Bordure fine semi-transparente */
+    border-radius: 10px;                   /* Coins arrondis */
+    text-align: center;                    /* Alignement du texte au centre */
+    cursor: pointer;                       /* Curseur en forme de main au survol */
+    transition: background-color 0.3s ease; /* Animation de transition pour la couleur de fond */
+}
+
+/* Style des liens */
+a {
+    font-family: 'Courier New', Courier, monospace;  /* Police de caractères */
+    color: aliceblue;                      /* Couleur bleu clair */
 }
