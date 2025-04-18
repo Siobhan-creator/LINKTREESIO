@@ -1,4 +1,5 @@
 Structure du Projet
+
 index.html : Structure principale de la page
 style.css  : Fichier de styles à créer
 
